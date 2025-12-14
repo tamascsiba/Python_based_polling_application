@@ -68,6 +68,98 @@ Secure storage of votes
 The encryption logic is implemented in:
 RSA_crypt.py
 
+# RSA_crypt.py
+
+⚠️ **Warning:** This implementation is strictly for **educational purposes** and should **not** be used in real-world or production cryptographic systems.
+
+
+## Features
+
+- RSA public and private key generation
+- Encryption of an IP address using RSA
+- Hexadecimal encoding of encrypted values
+- Decryption back to the original IP address
+
+## Requirements
+
+- Python 3.x
+- `sympy` library
+
+Install dependencies using:
+
+```bash
+pip install sympy
+```
+##How the Code Works
+
+1. Modular Inverse Calculation
+
+The mod_inverse function calculates the modular inverse using the Extended Euclidean Algorithm, which is necessary for computing the RSA private key.
+
+```python
+def mod_inverse(e, phi):
+```
+
+2. RSA Key Pair Generation
+
+The generate_key_pair function:
+
+Generates two random 50-digit prime numbers (p and q)
+
+Computes the modulus n = p * q
+
+Calculates Euler’s totient value phi = (p - 1) * (q - 1)
+
+Selects a public exponent e such that gcd(e, phi) = 1
+
+Computes the private exponent d
+
+```python
+public_key, private_key = generate_key_pair()
+```
+
+3. IP Address Encryption
+
+Each character of the IP address:
+
+Is converted to its Unicode value using ord()
+
+Is encrypted using modular exponentiation
+
+Is stored in a list of encrypted integers
+
+Example IP address:
+
+```python
+ip_addr = "192.168.0.1"
+```
+
+4. Hexadecimal Encoding
+
+The encrypted integers are converted into a hexadecimal string format, which can be useful for storage or transmission.
+
+```python
+crypted_ip_hex += "{:02x}".format(y)
+```
+
+5. Decryption
+
+For decryption:
+
+Each encrypted integer is decrypted using the private key
+
+Converted back to characters using chr()
+
+Reassembled into the original IP address string
+
+Final decrypted output:
+
+```bash
+192.168.0.1
+```
+
+
+
 ---
 
 ## ⚠️ Disclaimer:
