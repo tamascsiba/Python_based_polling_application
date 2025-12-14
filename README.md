@@ -32,6 +32,7 @@ This project is built using the following technologies:
 
 ## 🗂 Project Structure
 
+```bash
 Poll/
 │
 ├── app.py # Main Flask application
@@ -50,6 +51,7 @@ Poll/
 ├── users_polls_csv/ # User poll storage
 │
 └── README.md # Project documentation
+ ```
 
 ---
 
