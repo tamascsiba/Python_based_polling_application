@@ -3,12 +3,6 @@
 **Secretum** is a Python-based web application that enables secure and anonymous online voting.  
 The system uses **RSA encryption** to protect votes and provides a simple, user-friendly web interface for managing polls and displaying results.
 
-🔗 **Live demo:**  
-https://secretum-polling-app.herokuapp.com/
-
-🔗 **GitHub repository:**  
-https://github.com/tamascsiba/Poll
-
 ---
 
 ## 📌 Features
