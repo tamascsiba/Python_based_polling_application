@@ -90,7 +90,7 @@ Install dependencies using:
 ```bash
 pip install sympy
 ```
-##How the Code Works
+## How the Code Works
 
 1. Modular Inverse Calculation
 
